@@ -1,11 +1,34 @@
-<div *ngIf="hero">
-  <h2>{{hero.name}} details!</h2>
-  <div>
-    <label>id: </label>{{hero.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="hero.name" placeholder="name" />
+<section class="skeleton-section">
+  <div class="skeleton-header">
+    <kendo-skeleton shape="text" animation="pulse" [width]="250" [height]="70"></kendo-skeleton>
+    <h2 data-text="Details"> Details</h2>
   </div>
+  <article class="hero-details">
+    <ul class="hero-info">
+      <li>
+        <label class="edit-field inline">name:
+          <kendo-skeleton shape="text" animation="pulse" [width]="156" [height]="32"></kendo-skeleton>
+        </label>
+      </li>
+      <li><label>id: </label>
+        <kendo-skeleton shape="text" animation="wave" [width]="50" [height]="23"></kendo-skeleton>
+      </li>
+      <li *ngIf="hero.alignment">Alignment: {{ hero.alignment }}</li>
+    </ul>
+  </article>
+</section>
+<section *ngIf="hero">
+  <h2>{{hero.name}} Details</h2>
+  <article class="hero-details">
+    <ul class="hero-info">
+      <li>
+        <label class="edit-field">name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name" />
+      </li>
+      <li><label>id: </label>{{hero.id}}</li>
+      <li *ngIf="hero.alignment">Alignment: {{ hero.alignment }}</li>
+    </ul>
+  </article>
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
-</div>
+</section>

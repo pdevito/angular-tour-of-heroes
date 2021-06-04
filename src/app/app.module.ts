@@ -17,6 +17,7 @@ import { HeroSearchComponent } from './hero-search.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
+import { IndicatorsModule } from '@progress/kendo-angular-indicators';
 
 
 
@@ -29,12 +30,13 @@ import { NavigationModule } from '@progress/kendo-angular-navigation';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
-      delay: 300,
+      delay: 2000,
       passThruUnknownUrl: true
     }),
     LayoutModule,
     BrowserAnimationsModule,
-    NavigationModule
+    NavigationModule,
+    IndicatorsModule
   ],
   declarations: [
     AppComponent,
