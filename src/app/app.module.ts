@@ -16,6 +16,8 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroSearchComponent } from './hero-search.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationModule } from '@progress/kendo-angular-navigation';
+
 
 
 
@@ -31,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       passThruUnknownUrl: true
     }),
     LayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NavigationModule
   ],
   declarations: [
     AppComponent,
