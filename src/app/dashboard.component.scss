@@ -1,3 +1,4 @@
+@import 'src/assets/colors.scss';
 $spacing: 20px;
 
 /* border-box "include my padding in my h/w calculation */
@@ -21,10 +22,10 @@ h3 {
 }
 
 .hero-card {
-  background-color: #039be5;
-  color: white;
-  min-width: 130px;
-  min-height: 170px;
+  // background-color: $light-blue;
+  // color: #121587;
+  // min-width: 130px;
+  // min-height: 170px;
   // margin: 10px 0px;
   margin-bottom: $spacing;
   text-align: center;
